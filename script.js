@@ -41,3 +41,12 @@ function compute() {
 function appendDot() {
   // Function to handle decimal point input
 }
+
+let currentOperand = '';
+let previousOperand = '';
+let operation = null;
+
+function appendNumber(number) {
+  if (number === '.' && currentOperand.includes('.')) return; // Prevent multiple decimals
+  currentOperand = currentOperand.toString() + number.toString();
+}
